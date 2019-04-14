@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    container_name: notify-server
+    build: .
+    image: notify-server
+    ports: 
+      - 8000:80
+    environment:
+      - EMAIL_HOSTNAME=mail.example.com
+      - EMAIL_USER=user@example.com
+      - EMAIL_PASS=password
+      - EMAIL_FROM=alerts@example.com
+      - EMAIL_TO=1234567890@vtext.com
+
+    

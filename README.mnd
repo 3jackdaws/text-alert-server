@@ -1,0 +1,9 @@
+# Text Notifier Server Thing
+This is a simple service that exposes an interface to text based alerts or whatever.  This uses a common cell carrier feature where one can send texts to mobile numberts via email.
+
+For example, if you want to send a text to a Verizon mobile number, and the number is (123)456-7890, you send an email to 1234567890@vtext.com
+
+Email to text services are documented for most major carriers online.
+
+# Installation
+Git clone this repo to your docker-enabled server and change all the env variables in the `docker-compose.yml` file.  `docker-compose up -d` that puppy and you can now send the specified cell number a text by submitting a GET request to `/notify?m=your message here`
